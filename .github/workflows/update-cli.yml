@@ -30,7 +30,7 @@ jobs:
             downloadUrl="https://tools.veracode.com/veracode-cli/veracode-cli_${latest_version}_linux_x86.tar.gz"
             echo "Download URL: $downloadUrl"
             curl -sSO $downloadUrl
-            curl -sSO https://tools.veracode.com/veracode-cli/install.ps1
+            curl -sS -o veracode-cli_${latest_version}_windows.ps1 https://tools.veracode.com/veracode-cli/install.ps1
             ls -la
             echo "CLEAN UP"
             rm -rf veracode-cli_${local_version}_linux_x86.tar.gz
