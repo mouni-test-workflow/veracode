@@ -126,7 +126,7 @@ jobs:
       - name: Install Veracode CLI
         shell: pwsh
         run: |
-          $cliFile = Get-ChildItem -Name .ps1 | Select-Object -First 1
+          $cliFile = Get-ChildItem -Name *.ps1 | Select-Object -First 1
           Set-ExecutionPolicy Bypass -Scope Process -Force
           $ProgressPreference = "silentlyContinue"
           ./veracode-helper/helper/cli/$cliFile
