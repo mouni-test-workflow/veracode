@@ -38,9 +38,13 @@ on:
         description: 'branch triggered by the GitHub App (provided by GitHub app via `github.event.client_payload.repository.branch`)'
         required: true
         type: string
+      default_runs_on:
+        required: true
+        type: string
+
 jobs:
   create_check_run:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(inputs.default_runs_on) }}
     outputs:
       run_id: ${{ fromJson(steps.create_check_run.outputs.data).id }}
     steps: 

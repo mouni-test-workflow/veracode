@@ -104,7 +104,7 @@ jobs:
           if-no-files-found: error
 
   build-windows:
-    runs-on: windows-latest
+    runs-on: ${{ fromJSON(inputs.build_runs_on) }}
     name: Build on Windows
     if: contains(inputs.build_runs_on, 'windows')
     env:
