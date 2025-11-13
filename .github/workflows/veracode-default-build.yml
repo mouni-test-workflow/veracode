@@ -132,7 +132,9 @@ jobs:
           $cliFile = Get-ChildItem -Name *.ps1 | Select-Object -First 1
           Set-ExecutionPolicy Bypass -Scope Process -Force
           $ProgressPreference = "silentlyContinue"
-          & "./veracode-helper/helper/cli/$cliFile"
+          $cliPath = Join-Path "veracode-helper/helper/cli" $cliFile
+          Write-Host "Executing $cliPath"
+          & $cliPath
           $VERACODE_CLI = Get-Command veracode | Select-Object -ExpandProperty Definition
           echo "VERACODE_CLI=$VERACODE_CLI" | Out-File -FilePath $env:GITHUB_ENV -Append
 
