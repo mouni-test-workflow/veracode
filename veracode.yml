@@ -1,3 +1,5 @@
+build:
+      runs_on: ubuntu-latest
 veracode_static_scan:
   push:
     trigger: true
