@@ -91,7 +91,7 @@ jobs:
             bundle install
             cd ..
           fi
-          veracode package --source source-code --output veracode-artifacts --trust
+          veracode package --source source-code --output veracode-artifacts --trust --verbose
 
       # ---------------- Error handler ----------------
       - name: Package error
