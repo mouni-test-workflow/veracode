@@ -3,7 +3,7 @@ default:
 actions:
   veracode_static_scan:
     build:
-      runs_on: Ubuntu-20.04
+      runs_on: Ubuntu-24.04
 veracode_static_scan:
   push:
     trigger: true
