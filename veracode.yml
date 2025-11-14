@@ -6,7 +6,7 @@ actions:
       runs_on: windows-2022
 veracode_static_scan:
   push:
-    trigger: false
+    trigger: true
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
     # Leaving them both blank means this will never run
