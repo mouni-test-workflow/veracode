@@ -3,7 +3,7 @@ default:
 actions:
   veracode_static_scan:
     build:
-      runs_on: windows-2022
+      runs_on: Ubuntu-20.04
 veracode_static_scan:
   push:
     trigger: true
