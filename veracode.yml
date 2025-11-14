@@ -1,9 +1,3 @@
-default:
-  runs_on: ubuntu-latest
-actions:
-  veracode_static_scan:
-    build:
-      runs_on: windows-2022
 veracode_static_scan:
   push:
     trigger: true
